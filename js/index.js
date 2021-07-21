@@ -456,10 +456,6 @@ function pos(){  //定位功能
       let w2 = Number($('#fen_wd').val())
       let w3 = Number($('#miao_wd').val())
       if(((j1>=0 && j2>=0 && j3>=0) || (j1<=0 && j2<=0 && j3<=0)) && ((w1>=0 && w2>=0 && w3>=0) || (w1<=0 && w2<=0 && w3<=0))){
-
-        var a = mars3d.PointTrans.proj4Trans([20428584.47, 3425222.26], mars3d.CRS.CGCS2000_GK_Zone_6, mars3d.CRS.EPSG4326);
-        alert(a[0])
-
         map.setCameraView({ lat: wd, lng: jd, alt: 10000, pitch: -90 })//视角移动
         let val = {x: jd, y: wd, z: height,}
         updateMarker(val, true)//更新点
